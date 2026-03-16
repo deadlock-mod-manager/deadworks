@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="DeadworksManaged.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="DeadworksManaged.Api\**" />
+    <Compile Remove="DeadworksManaged.Generators\**" />
+    <Compile Remove="plugins\**" />
+    <Compile Remove="DeadworksManaged.Tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="DeadworksManaged.Api\DeadworksManaged.Api.csproj" />
+  </ItemGroup>
+
+  <Target Name="DeployToGame" AfterTargets="Build">
+    <ItemGroup>
+      <DeployFiles Include="$(OutputPath)DeadworksManaged.dll;$(OutputPath)DeadworksManaged.pdb;$(OutputPath)DeadworksManaged.deps.json;$(OutputPath)DeadworksManaged.runtimeconfig.json;$(OutputPath)DeadworksManaged.Api.dll;$(OutputPath)DeadworksManaged.Api.pdb" />
+    </ItemGroup>
+    <Copy SourceFiles="@(DeployFiles)" DestinationFolder="$(DeadlockManagedDir)" SkipUnchangedFiles="false" Retries="0" ContinueOnError="WarnAndContinue" />
+  </Target>
+
+</Project>

@@ -1,0 +1,3 @@
+[submodule "sourcesdk"]
+	path = sourcesdk
+	url = https://github.com/Deadworks-net/sourcesdk.git

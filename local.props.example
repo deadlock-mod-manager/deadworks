@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copy this file to local.props and adjust paths for your machine. -->
+<Project>
+  <PropertyGroup>
+    <!-- protobuf 3.21.8: build from source or provide prebuilt headers + lib -->
+    <ProtobufIncludeDir>C:\path\to\protobuf-3.21.8\src</ProtobufIncludeDir>
+    <ProtobufLibDir>C:\path\to\protobuf-3.21.8\build\Release</ProtobufLibDir>
+
+    <!-- .NET nethost static lib (comes with .NET SDK) -->
+    <!-- Find yours: dir "%ProgramFiles%\dotnet\packs\Microsoft.NETCore.App.Host.win-x64" -->
+    <NetHostDir>C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Host.win-x64\10.0.3\runtimes\win-x64\native</NetHostDir>
+
+    <!-- Deadlock install (for post-build deploy, optional) -->
+    <DeadlockDir>C:\SteamLibrary\steamapps\common\Deadlock\game\bin\win64</DeadlockDir>
+  </PropertyGroup>
+</Project>

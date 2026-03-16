@@ -1,0 +1,6 @@
+<Project>
+  <Import Project="$(MSBuildThisFileDirectory)..\local.props" Condition="exists('$(MSBuildThisFileDirectory)..\local.props')" />
+  <PropertyGroup Condition="'$(DeadlockDir)' != ''">
+    <DeadlockManagedDir>$(DeadlockDir)\managed</DeadlockManagedDir>
+  </PropertyGroup>
+</Project>

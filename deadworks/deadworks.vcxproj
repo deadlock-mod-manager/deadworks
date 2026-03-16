@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>18.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{191caf0c-d687-4a41-9d3e-10f7bd9e0dab}</ProjectGuid>
+    <RootNamespace>deadworks</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(ProjectDir)..\local.props" Condition="exists('$(ProjectDir)..\local.props')" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v145</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>COMPILER_MSVC;COMPILER_MSVC64;PLATFORM_64BITS;X64BITS;DEADLOCK;NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;NETHOST_USE_AS_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp23</LanguageStandard>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\protobuf;$(ProtobufIncludeDir);$(ProjectDir)..\sourcesdk\public\tier1;$(ProjectDir)..\sourcesdk\public\tier0;$(ProjectDir)..\sourcesdk\public\appframework;$(ProjectDir)..\sourcesdk\public;$(ProjectDir)..\sourcesdk\common;$(ProjectDir)..\sourcesdk\public\mathlib;$(ProjectDir)..\sourcesdk\game\shared;$(ProjectDir)..\sourcesdk\public\entity2;$(ProjectDir)..\sourcesdk\public\engine;$(ProjectDir)..\vendor;$(NetHostDir)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.hpp</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>pch.hpp</ForcedIncludeFiles>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(ProjectDir)..\sourcesdk\lib\win64\tier0.lib;libprotobuf.lib;libnethost.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProtobufLibDir);$(NetHostDir)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>if exist "$(TargetDir)managed" rmdir /s /q "$(TargetDir)managed"
+dotnet publish "$(ProjectDir)..\managed\DeadworksManaged.csproj" -c Release -o "$(TargetDir)managed" --no-self-contained
+dotnet publish "$(ProjectDir)..\managed\plugins\DeathmatchPlugin\DeathmatchPlugin.csproj" -c Release -o "$(TargetDir)managed\plugins" --no-self-contained
+dotnet publish "$(ProjectDir)..\managed\plugins\ScourgePlugin\ScourgePlugin.csproj" -c Release -o "$(TargetDir)managed\plugins" --no-self-contained
+dotnet publish "$(ProjectDir)..\managed\plugins\RollTheDicePlugin\RollTheDicePlugin.csproj" -c Release -o "$(TargetDir)managed\plugins" --no-self-contained
+dotnet publish "$(ProjectDir)..\managed\plugins\ExampleTimerPlugin\ExampleTimerPlugin.csproj" -c Release -o "$(TargetDir)managed\plugins" --no-self-contained
+if "$(DeadlockDir)"=="" goto :eof
+xcopy "$(TargetPath)" "$(DeadlockDir)\" /Y /I
+if exist "$(DeadlockDir)\managed" rmdir /s /q "$(DeadlockDir)\managed"
+xcopy "$(TargetDir)managed\*" "$(DeadlockDir)\managed\" /Y /I /E
+xcopy "$(ProjectDir)..\config\deadworks_mem.jsonc" "$(DeadlockDir)\..\..\citadel\cfg\" /Y /I</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <!-- PCH generator -->
+    <ClCompile Include="src\pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <!-- Protobuf (no PCH) -->
+    <ClCompile Include="..\protobuf\base_gcmessages.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </ClCompile>
+    <ClCompile Include="..\protobuf\citadel_clientmessages.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </ClCompile>
+    <ClCompile Include="..\protobuf\citadel_gcmessages_common.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </ClCompile>
+    <ClCompile Include="..\protobuf\citadel_usermessages.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </ClCompile>
+    <ClCompile Include="..\protobuf\gameevents.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </ClCompile>
+    <ClCompile Include="..\protobuf\gcsdk_gcmessages.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </ClCompile>
+    <ClCompile Include="..\protobuf\netmessages.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </ClCompile>
+    <ClCompile Include="..\protobuf\networkbasetypes.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </ClCompile>
+    <ClCompile Include="..\protobuf\networksystem_protomessages.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </ClCompile>
+    <ClCompile Include="..\protobuf\network_connection.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </ClCompile>
+    <ClCompile Include="..\protobuf\source2_steam_stats.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </ClCompile>
+    <ClCompile Include="..\protobuf\steammessages.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </ClCompile>
+    <ClCompile Include="..\protobuf\steammessages_steamlearn.steamworkssdk.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </ClCompile>
+    <ClCompile Include="..\protobuf\steammessages_unified_base.steamworkssdk.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </ClCompile>
+    <ClCompile Include="..\protobuf\valveextensions.pb.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </ClCompile>
+    <!-- Source SDK (no PCH) -->
+    <ClCompile Include="..\sourcesdk\entity2\entityidentity.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </ClCompile>
+    <ClCompile Include="..\sourcesdk\entity2\entitykeyvalues.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </ClCompile>
+    <ClCompile Include="..\sourcesdk\entity2\entitysystem.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </ClCompile>
+    <ClCompile Include="..\sourcesdk\tier1\convar.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </ClCompile>
+    <ClCompile Include="..\sourcesdk\tier1\keyvalues3.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </ClCompile>
+    <!-- Project sources (use PCH) -->
+    <ClCompile Include="src\Hosting\DotNetHost.cpp" />
+    <ClCompile Include="src\Core\Hooks\CoreHooks.cpp" />
+    <ClCompile Include="src\Core\Hooks\CBaseEntity.cpp" />
+    <ClCompile Include="src\Core\Hooks\CCitadelPlayerPawn.cpp" />
+    <ClCompile Include="src\Core\Hooks\CCitadelPlayerController.cpp" />
+    <ClCompile Include="src\Core\Hooks\GameEvents.cpp" />
+    <ClCompile Include="src\Core\Hooks\CServerSideClientBase.cpp" />
+    <ClCompile Include="src\Core\Hooks\PostEventAbstract.cpp" />
+    <ClCompile Include="src\Core\Hooks\NetworkServerService.cpp" />
+    <ClCompile Include="src\Core\Hooks\Source2GameClients.cpp" />
+    <ClCompile Include="src\Core\Hooks\Source2Server.cpp" />
+    <ClCompile Include="src\Core\Hooks\TraceShape.cpp" />
+    <ClCompile Include="src\Core\Hooks\EntityIO.cpp" />
+    <ClCompile Include="src\Core\Hooks\ProcessUsercmds.cpp" />
+    <ClCompile Include="src\Core\Hooks\AbilityThink.cpp" />
+    <ClCompile Include="src\Core\Deadworks.cpp" />
+    <ClCompile Include="src\Core\NativeCallbacks.cpp" />
+    <ClCompile Include="src\Core\NativeAbility.cpp" />
+    <ClCompile Include="src\Core\NativeDamage.cpp" />
+    <ClCompile Include="src\Core\NativeHero.cpp" />
+    <ClCompile Include="src\Core\ManagedCallbacks.cpp" />
+    <ClCompile Include="src\Core\Hooks\BuildGameSessionManifest.cpp" />
+    <ClCompile Include="src\Memory\MemoryDataLoader.cpp" />
+    <ClCompile Include="src\Memory\Scanner.cpp" />
+    <ClCompile Include="src\SDK\Interfaces.cpp" />
+    <ClCompile Include="src\SDK\Schema\Schema.cpp" />
+    <ClCompile Include="src\startup.cpp" />
+    <!-- Vendor (no PCH) -->
+    <ClCompile Include="..\vendor\safetyhook.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </ClCompile>
+    <ClCompile Include="..\vendor\Zydis.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+      <ForcedIncludeFiles Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\protobuf\base_gcmessages.pb.h" />
+    <ClInclude Include="..\protobuf\citadel_clientmessages.pb.h" />
+    <ClInclude Include="..\protobuf\citadel_gcmessages_common.pb.h" />
+    <ClInclude Include="..\protobuf\citadel_usermessages.pb.h" />
+    <ClInclude Include="..\protobuf\gameevents.pb.h" />
+    <ClInclude Include="..\protobuf\gcsdk_gcmessages.pb.h" />
+    <ClInclude Include="..\protobuf\netmessages.pb.h" />
+    <ClInclude Include="..\protobuf\networkbasetypes.pb.h" />
+    <ClInclude Include="..\protobuf\networksystem_protomessages.pb.h" />
+    <ClInclude Include="..\protobuf\network_connection.pb.h" />
+    <ClInclude Include="..\protobuf\source2_steam_stats.pb.h" />
+    <ClInclude Include="..\protobuf\steammessages.pb.h" />
+    <ClInclude Include="..\protobuf\steammessages_steamlearn.steamworkssdk.pb.h" />
+    <ClInclude Include="..\protobuf\steammessages_unified_base.steamworkssdk.pb.h" />
+    <ClInclude Include="..\protobuf\valveextensions.pb.h" />
+    <ClInclude Include="src\pch.hpp" />
+    <ClInclude Include="src\Hosting\DotNetHost.hpp" />
+    <ClInclude Include="src\Core\Hooks\CoreHooks.hpp" />
+    <ClInclude Include="src\Core\Hooks\CBaseEntity.hpp" />
+    <ClInclude Include="src\Core\Hooks\CCitadelPlayerPawn.hpp" />
+    <ClInclude Include="src\Core\Hooks\CCitadelPlayerController.hpp" />
+    <ClInclude Include="src\Core\Hooks\GameEvents.hpp" />
+    <ClInclude Include="src\Core\Hooks\CServerSideClientBase.hpp" />
+    <ClInclude Include="src\Core\Hooks\PostEventAbstract.hpp" />
+    <ClInclude Include="src\Core\Hooks\NetworkServerService.hpp" />
+    <ClInclude Include="src\Core\Hooks\Source2GameClients.hpp" />
+    <ClInclude Include="src\Core\Hooks\Source2Server.hpp" />
+    <ClInclude Include="src\Core\Hooks\TraceShape.hpp" />
+    <ClInclude Include="src\Core\Hooks\EntityIO.hpp" />
+    <ClInclude Include="src\Core\Hooks\ProcessUsercmds.hpp" />
+    <ClInclude Include="src\Core\Hooks\AbilityThink.hpp" />
+    <ClInclude Include="src\Core\Hooks\BuildGameSessionManifest.hpp" />
+    <ClInclude Include="src\Core\Deadworks.hpp" />
+    <ClInclude Include="src\Core\NativeCallbacks.hpp" />
+    <ClInclude Include="src\Core\NativeOffsets.hpp" />
+    <ClInclude Include="src\Core\NativeAbility.hpp" />
+    <ClInclude Include="src\Core\NativeDamage.hpp" />
+    <ClInclude Include="src\Core\NativeHero.hpp" />
+    <ClInclude Include="src\Core\ManagedCallbacks.hpp" />
+    <ClInclude Include="src\Logging\ConsoleLogger.hpp" />
+    <ClInclude Include="src\Lib\Module.hpp" />
+    <ClInclude Include="src\Lib\Virtual.hpp" />
+    <ClInclude Include="src\Logging\Logger.hpp" />
+    <ClInclude Include="src\Logging\S2Logger.hpp" />
+    <ClInclude Include="src\Memory\MemoryDataLoader.hpp" />
+    <ClInclude Include="src\Memory\Scanner.hpp" />
+    <ClInclude Include="src\SDK\CBaseEntity.hpp" />
+    <ClInclude Include="src\SDK\CBasePlayerController.hpp" />
+    <ClInclude Include="src\SDK\CBasePlayerPawn.hpp" />
+    <ClInclude Include="src\SDK\CCitadelPlayerController.hpp" />
+    <ClInclude Include="src\SDK\CCitadelPlayerPawn.hpp" />
+    <ClInclude Include="src\SDK\CEntitySystem.hpp" />
+    <ClInclude Include="src\SDK\CTakeDamageInfo.hpp" />
+    <ClInclude Include="src\SDK\CTakeDamageResult.hpp" />
+    <ClInclude Include="src\SDK\Enums.hpp" />
+    <ClInclude Include="src\SDK\Core.hpp" />
+    <ClInclude Include="src\SDK\Schema\Schema.hpp" />
+    <ClInclude Include="src\SDK\Util.hpp" />
+    <ClInclude Include="src\Utils\Chrono.hpp" />
+    <ClInclude Include="src\Utils\String.hpp" />
+    <ClInclude Include="..\vendor\nlohmann\json.hpp" />
+    <ClInclude Include="..\vendor\nlohmann\json_fwd.hpp" />
+    <ClInclude Include="..\vendor\safetyhook.hpp" />
+    <ClInclude Include="..\vendor\Zydis.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

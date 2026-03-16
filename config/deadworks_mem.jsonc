@@ -1,0 +1,170 @@
+{
+	"signatures": {
+		"CMaterialSystem2AppSystemDict::OnAppSystemLoaded": {
+			"library": "engine2.dll",
+			"windows": "40 53 48 83 EC 20 80 B9 ? ? ? ? ? 48 8B D9 74 ? 48 8B 89"
+		},
+		"CServerSideClientBase::FilterMessage": {
+			"library": "engine2.dll",
+			"windows": "40 53 48 83 EC 30 48 8B 02 48 8B D9"
+		},
+		"UTIL_Remove": {
+			"library": "server.dll",
+			"windows": "48 85 C9 74 ? 48 8B D1 48 8B 0D"
+		},
+		"CBasePlayerController::SetPawn": {
+			"library": "server.dll",
+			"windows": "44 88 4C 24 ? 53"
+		},
+		"CGCClientSystem::OnServerVersionCheck": {
+			"library": "server.dll",
+			"windows": "48 89 5C 24 ? 57 48 83 EC ? 8B FA 48 8B D9 BA ? ? ? ? 48 8D 0D ? ? ? ? E8 ? ? ? ? 48 85 C0 75 ? 48 8B 05 ? ? ? ? 48 8B 40 ? ? ? ? 74 ? 89 BB"
+		},
+		"CCitadelPlayerPawn::ModifyCurrency": {
+			"library": "server.dll",
+			"windows": "48 89 5C 24 ?? 55 41 54 41 55 41 56 41 57 48 8D AC 24"
+		},
+		"CBaseEntity::TakeDamageOld": {
+			"library": "server.dll",
+			"windows": "40 55 41 54 41 55 41 56 41 57 48 81 EC ?? ?? ?? ?? 48 8D 6C 24 ?? 48 89 9D ?? ?? ?? ?? 45 33 ED"
+		},
+		"g_GameEventManager": {
+			"library": "server.dll",
+			"windows": "FF 15 ?? ?? ?? ?? 48 8B 0D ?? ?? ?? ?? E8 ?? ?? ?? ?? E8"
+		},
+		"GetVDataInstanceByName": {
+			"library": "server.dll",
+			"windows": "48 89 5C 24 ?? 57 48 83 EC ?? 33 FF 4C 8B CA 8B D9"
+		},
+		"CCitadelPlayerPawn::SelectHeroInternal": {
+			"library": "server.dll",
+			"windows": "48 89 5C 24 ?? 48 89 74 24 ?? 57 48 83 EC ?? 48 8B DA 48 8B F1 E8 ?? ?? ?? ?? 48 8B F8 E8"
+		},
+		"CCitadelPlayerController::CreateHeroPawn": {
+			"library": "server.dll",
+			"windows": "48 8B C4 48 89 48 ?? 55 57 48 8D 68 ?? 48 81 EC ?? ?? ?? ?? 48 89 58 ?? 48 8B F9 48 8B 0D"
+		},
+		"CModifierProperty::AddModifier": {
+			"library": "server.dll",
+			"windows": "44 89 44 24 ?? 48 89 54 24 ?? 53 55 56 57 41 55"
+		},
+		"CEntitySystem::CreateEntityByName": {
+			"library": "server.dll",
+			"windows": "48 83 EC ?? 48 8B 0D ?? ?? ?? ?? 41 8B C0"
+		},
+		"CEntitySystem::QueueSpawnEntity": {
+			"library": "server.dll",
+			"windows": "40 56 57 41 56 48 83 EC ?? F7 42"
+		},
+		"CEntitySystem::ExecuteQueuedCreation": {
+			"library": "server.dll",
+			"windows": "48 89 5C 24 ?? 57 48 81 EC ?? ?? ?? ?? FF 81 ?? ?? ?? ?? 48 8D 44 24"
+		},
+		"CEntityInstance::AcceptInput": {
+			"library": "server.dll",
+			"windows": "48 89 5C 24 ?? 48 89 74 24 ?? 57 48 83 EC ?? 49 8B F0 48 8B D9"
+		},
+		"CCitadelGameRules::BuildGameSessionManifest": {
+			"library": "server.dll",
+			"windows": "48 89 54 24 ?? 48 89 4C 24 ?? 55 53 56 57 41 54 41 55 41 56 41 57 48 8D AC 24 ?? ?? ?? ?? 48 81 EC ?? ?? ?? ?? ?? ?? ?? 48 8D 0D"
+		},
+		"AddResource": {
+			"library": "server.dll",
+			"windows": "48 89 5C 24 ?? 57 48 83 EC ?? 48 8B FA 48 8B D9 48 85 C9 74 ?? ?? ?? ?? 74"
+		},
+		"CBaseEntity::EmitSoundParams": {
+			"library": "server.dll",
+			"windows": "48 89 5C 24 ?? 48 89 74 24 ?? 48 89 7C 24 ?? 55 48 8B EC 48 81 EC ?? ?? ?? ?? 33 C0"
+		},
+		"CCitadelPlayerController::ClientConCommand": {
+			"library": "server.dll",
+			"windows": "48 89 5C 24 ?? 48 89 74 24 ?? 55 57 41 54 41 55 41 57 48 8D AC 24 ?? ?? ?? ?? 48 81 EC ?? ?? ?? ?? 83 BA"
+		},
+		"CCitadelPlayerPawn::ResetHero": {
+			"library": "server.dll",
+			"windows": "48 89 74 24 ?? 57 48 83 EC 20 0F B6 81 ?? ?? ?? ?? 0F B6 F2"
+		},
+		"CCitadelAbilityComponent::FindAbilityByName": {
+			"library": "server.dll",
+			"windows": "40 57 48 83 EC ?? 48 8B F9 B9"
+		},
+		"CCitadelAbilityComponent::CreateAndRegisterAbility": {
+			"library": "server.dll",
+			"windows": "48 89 5C 24 ?? 44 89 4C 24 ?? 55 56 57 41 56 41 57 48 83 EC"
+		},
+		"CHeroDefinitionManager::HeroNameToId": {
+			"library": "server.dll",
+			"windows": "48 89 5C 24 ?? 57 48 83 EC ?? 49 8B C8"
+		},
+		"CCitadelAbilityComponent::OnAbilityRemoved": {
+			"library": "server.dll",
+			"windows": "48 89 5C 24 ?? 55 56 57 48 83 EC 60 41 0F B6 E8 48 8B F2 48 8B F9 33 DB E8"
+		},
+		"CTakeDamageInfo::Ctor": {
+			"library": "server.dll",
+			"windows": "40 53 48 83 EC 50 F3 0F 10 84 24 80 00 00 00 48 8D 05"
+		},
+		"CTakeDamageInfo::Dtor": {
+			"library": "server.dll",
+			// this is a bad sig
+			"windows": "48 89 5C 24 08 57 48 83 EC 20 48 8D 05 ?? ?? ?? ?? 48 8B D9 48 89 01 48 81 C1 FC 00 00 00 E8 ?? ?? ?? ?? 8B 83 F4 00 00 00"
+		},
+		"TraceShape": {
+			"library": "server.dll",
+			"windows": "48 89 5C 24 20 48 89 4C 24 08 55 57 41 54 41 55 41 56 48 8D AC 24"
+		},
+		"CBasePlayerController::ProcessUsercmds": {
+			"library": "server.dll",
+			"windows": "48 8B C4 44 88 48 ?? 44 89 40 ?? 48 89 50 ?? 53"
+		},
+		"CCitadelPlayerPawn::AbilityThink": {
+			"library": "server.dll",
+			"windows": "48 89 4C 24 08 55 53 41 55 41 56 41 57 48 8D AC 24 ?? ?? ?? ?? 48 81 EC ?? ?? ?? ?? 8B 91 DC 03"
+		},
+		"CCitadelPlayerPawn::AddItem": {
+			"library": "server.dll",
+			"windows": "48 89 5C 24 ?? 48 89 6C 24 ?? 48 89 74 24 ?? 57 48 83 EC 30 48 8B D9 41 8B F1 B9 04 00 00 00 41"
+		},
+		"CCitadelPlayerPawn::SellItem": {
+			"library": "server.dll",
+			"windows": "40 55 53 41 54 41 55 41 57 48 8D 6C 24 80 48 81 EC 80 01 00 00 4C 8B E9 45 0F B6 E1 B9 04 00 00"
+		},
+		"CBaseModelEntity::SetModel": {
+			"library": "server.dll",
+			"windows": "40 53 48 83 EC 20 48 8B D9 4C 8B C2 48 8B 0D ?? ?? ?? ?? 48 8D 54 24 40 48 8B 01 FF 50 60 48 8B 54 24 40 48 8B CB E8 15 00 00 00"
+		},
+		"CCitadelAbilityComponent::ExecuteAbilityBySlot": {
+			"library": "server.dll",
+			"windows": "48 89 5C 24 ?? 48 89 6C 24 ?? 56 57 41 56 48 83 EC ?? 48 8B F9 66 89 54 24"
+		},
+		"CCitadelAbilityComponent::ExecuteAbilityByID": {
+			"library": "server.dll",
+			"windows": "48 89 5C 24 ?? 48 89 6C 24 ?? 48 89 74 24 ?? 48 89 7C 24 ?? 41 54 41 56 41 57 48 63 B9"
+		},
+		"CCitadelAbilityComponent::ExecuteAbility": {
+			"library": "server.dll",
+			"windows": "44 88 4C 24 ?? 44 88 44 24 ?? 53 56 57"
+		},
+		"CCitadelAbilityComponent::GetAbilityBySlot": {
+			"library": "server.dll",
+			"windows": "48 89 5C 24 ?? 66 89 54 24 ?? 57 48 83 EC ?? 48 8B D9"
+		},
+		"CCitadelBaseAbility::ToggleActivate": {
+			"library": "server.dll",
+			"windows": "48 89 5C 24 ?? 56 48 83 EC ?? 0F B6 81"
+		}
+	},
+	"virtuals": {
+		"ISource2Server::ApplyGameSettings": 18,
+		"ISource2Server::GameFrame": 19,
+		"ISource2GameClients::ClientConnect": 12,
+		"ISource2GameClients::ClientPutInServer": 13,
+		"ISource2GameClients::ClientDisconnect": 16,
+		"INetworkServerService::StartupServer": 26,
+		"IGameEventManager2::FireEvent": 7,
+		"IGameEventSystem::PostEventAbstract": 16,
+		"CBaseEntity::StartTouch": 148,
+		"CBaseEntity::Touch": 149,
+		"CBaseEntity::EndTouch": 150
+	}
+}
