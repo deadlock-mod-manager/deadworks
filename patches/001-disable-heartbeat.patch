@@ -1,0 +1,11 @@
+--- a/managed/DeadworksConfig.cs
++++ b/managed/DeadworksConfig.cs
+@@ -18,7 +18,7 @@ internal class ServerBrowserConfig
+     public List<string> ExtraMaps { get; set; } = [];
+ 
+     [JsonPropertyName("unlisted")]
+-    public bool Unlisted { get; set; } = false;
++    public bool Unlisted { get; set; } = true;
+ }
+ 
+ internal class DeadworksConfigRoot
