@@ -1,0 +1,100 @@
+name: Sync upstream
+
+on:
+  schedule:
+    - cron: "0 6 * * *" # daily at 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Fetch upstream
+        run: |
+          git remote add upstream https://github.com/Deadworks-net/deadworks.git
+          git fetch upstream main
+
+      - name: Check for new commits
+        id: check
+        run: |
+          LOCAL=$(git rev-parse HEAD)
+          UPSTREAM=$(git rev-parse upstream/main)
+          if [ "$LOCAL" = "$UPSTREAM" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Already up to date."
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+            echo "Upstream has new commits."
+          fi
+
+      - name: Rebase onto upstream
+        if: steps.check.outputs.skip != 'true'
+        id: rebase
+        run: |
+          git rebase upstream/main 2>&1 | tee /tmp/rebase-output.txt
+          echo "status=$?" >> "$GITHUB_OUTPUT"
+        continue-on-error: true
+
+      - name: Apply patches
+        if: steps.check.outputs.skip != 'true' && steps.rebase.outcome == 'success'
+        id: patches
+        run: |
+          failed=""
+          for patch in patches/*.patch; do
+            [ -f "$patch" ] || continue
+            echo "Applying $patch..."
+            if git apply --check "$patch" 2>/dev/null; then
+              git apply "$patch"
+              echo "  OK"
+            else
+              echo "  FAILED"
+              failed="$failed $patch"
+            fi
+          done
+          if [ -n "$failed" ]; then
+            echo "failed=$failed" >> "$GITHUB_OUTPUT"
+            exit 1
+          fi
+        continue-on-error: true
+
+      - name: Push to fork
+        if: steps.check.outputs.skip != 'true' && steps.rebase.outcome == 'success' && steps.patches.outcome == 'success'
+        run: git push --force-with-lease origin main
+
+      - name: Open issue on failure
+        if: steps.rebase.outcome == 'failure' || steps.patches.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const rebaseOk = '${{ steps.rebase.outcome }}' === 'success';
+            const patchFailed = '${{ steps.patches.outputs.failed }}';
+            let body = '## Upstream sync failed\n\n';
+            if (!rebaseOk) {
+              body += '**Rebase failed.** There are merge conflicts between upstream and the fork.\n\n';
+              body += 'Run locally:\n```bash\ngit fetch upstream\ngit rebase upstream/main\n```\n';
+            } else {
+              body += `**Patch apply failed:** \`${patchFailed.trim()}\`\n\n`;
+              body += 'The upstream likely changed lines that a patch touches. Regenerate the affected patch(es).\n';
+            }
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Upstream sync failed (${new Date().toISOString().slice(0, 10)})`,
+              body,
+              labels: ['upstream-sync']
+            });
